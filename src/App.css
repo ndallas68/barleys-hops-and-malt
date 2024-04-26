@@ -1,0 +1,237 @@
+
+/*--------  HERO  ----------*/
+.hero{
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/bar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+}
+
+.hero--container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero--header{
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    font-weight: bold;
+
+}
+
+@media screen and ( max-width: 850px ) {
+    /*---- NAVBAR ----*/
+    .nav--menu{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: var(--menuCard);
+        color: white;
+        width: 70vw !important;
+        height: 100vh;
+        z-index: 99;
+
+        padding: 3rem;
+        align-items: center;
+    }
+    .nav--list{
+        flex-direction: column;
+        position: relative;
+    }
+    .logo::before{
+        content: '';
+        position: absolute;
+        top: 2.2rem;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(109, 109, 109);
+        border-radius: 40%;
+    }
+    .nav--btns{
+        flex-direction: column;
+        margin-top: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .close{
+        display: flex !important;
+        align-self: center;
+        justify-self: center;
+    }
+
+    /*---- HERO ----*/
+    .hero--container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        color: white;
+        background: var(--fade);
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .hero--header{
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+}
+
+/*--------- SPECIALS ----------*/
+.specials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+.specials--container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+
+}
+.specials--container__text>*{
+    margin-top: 2rem;
+}
+
+.specials--header{
+
+}
+
+.specials--dishes{
+    display: flex;
+    gap: 5rem;
+}
+
+.specials--ca{
+    display: flex;
+}
+
+@media screen and ( max-width: 850px) {
+    .specials--dishes{
+        gap: 2rem;
+    } 
+    .specials{
+       flex-direction: column;
+    }
+    .specials>section{
+        width: 100%;
+    }
+}
+
+/*--------- FAVORITES -----------*/
+#favorites{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+}
+.favorites--header{
+    display: flex;
+    position: relative;
+    gap: 4rem;
+    justify-content: flex-start;
+    margin: 3rem;
+}
+
+.favorites--header__active {
+    position: relative; 
+    cursor: pointer;
+}
+
+.favorites--header__active::after {
+    content: '';
+    position: absolute;
+    bottom: -12px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; 
+    height: 10px; 
+    background-color: black; 
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.food--card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    border: white;
+    color: white;
+    padding: 1rem;
+    background: linear-gradient(145deg, #656565 40%, #000000 100.75%) ;
+    box-shadow: 0 35px 60px -15px rgba(0,0,0,0.7);
+
+    width: 30%;
+}
+.food--card:hover{
+    transform: scale(1.05);
+    transition: all 3s;
+    cursor: pointer;
+}
+
+
+
+.reviews{
+    position: relative;
+}
+
+.favorites{
+    position: relative;
+}
+
+@media screen and ( max-width: 850px ) {
+    #favorites{
+        display: noned;
+    }
+}
+
+/*--------- MENU CARD ---------*/
+#menuCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuCard--container{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media screen and ( max-width: 850px ) {
+    .menuCard--container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
