@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
     const [isMobile, setIsMobile] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const getWindowSize = useCallback(() => {
-        setIsMobile(window.innerWidth <= 850); 
+        setIsMobile(window.innerWidth <= 768); 
     }, []);
 
     useEffect(() => {
@@ -19,46 +21,47 @@ export default function Header() {
     }, [getWindowSize]);
 
     return (
-        <header className="flex bg-white py-2 px-5 justify-between header">
+        <header className="header" id="home">
             {(isMobile === true && menuOpen === false) ? (
-                <div className="flex w-full items-center justify-between pt-2">
+                <div className="desktop--nav">
                     <span className="text-xl font-bold tracking-wider">Barley{"'"}s</span>
                     <nav className="bg-var-appColor p-[0.5rem] rounded-md cursor-pointer hamburger"
                         onClick={() => {setMenuOpen(true)}}
                     >
-                        <CiMenuBurger />
+                        <CiMenuBurger size={25} className="font-bold"/>
                     </nav>
                 </div>
                 
             ) : (
-                <ul className="flex gap-5 ml-5 w-full justify-between nav--menu">
-                    <div className="flex gap-5 items-center nav--list">
-                        <span className="text-xl font-bold flex items-center justify-center tracking-wider logo">Barley{"'"}s</span>
-                        <a href="" onClick={() => {setMenuOpen(false)}}>
-                            <li>Events</li>
-                        </a>
-                        <a href="#contact" onClick={() => {setMenuOpen(false)}}>
-                            <li>Specials</li>
-                        </a>
-                        <a href="" onClick={() => {setMenuOpen(false)}}>
-                            <li>Contact Us</li>
-                        </a>
-                    </div>
-                    
-                    <div className="flex gap-3 nav--btns">
-                        <button
-                            className='btn--secondary btn--mobile'
-                            onClick={() => {setMenuOpen(false)}}
-                        >Order</button>
-                        <button 
-                            className='
-                                btn--main btn--mobile
-                            '
-                            onClick={() => {setMenuOpen(false)}}
-                        >Menu</button>
-                    </div>
-                    <li className="hidden close hover:cursor-pointer" onClick={() => {setMenuOpen(false)}}>Close</li>
-                </ul>
+                <AnimatePresence mode="popLayout">
+                    <motion.ul className="flex gap-5 ml-5 w-full justify-between nav--menu"
+                        initial={{ x: '100%' }}
+                        animate={{ x: 0 }}
+                        exit={{ x: '-100%'}}
+                        transition={{ type: "spring", duration: 0.7 }}
+                    >
+                        <div className="flex gap-5 items-center nav--list">
+                            <span className="logo">Barley{"'"}s</span>
+                            <a href="" onClick={() => {setMenuOpen(false)}}>
+                                <li>Events</li>
+                            </a>
+                            <a href="#specials" onClick={() => {setMenuOpen(false)}}>
+                                <li>Specials</li>
+                            </a>
+                            <a href="#contact" onClick={() => {setMenuOpen(false)}}>
+                                <li>Contact Us</li>
+                            </a>
+                        </div>
+                        
+                        <div className="flex nav--btns">
+                            <button
+                                className='grow--btn'
+                                onClick={() => {setMenuOpen(false)}}
+                            >Order {isMobile ? '' : 'Online'}</button>
+                        </div>
+                        <li className="hidden close hover:cursor-pointer" onClick={() => {setMenuOpen(false)}}><IoMdClose /></li>
+                    </motion.ul>
+                </AnimatePresence>
             )}
         </header>
     );

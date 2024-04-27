@@ -4,23 +4,8 @@ export default function MenuCard() {
     return (
         <div id='menuCard'>
             <div className='menuCard--container'>
-                <img 
-                    src={Menu} 
-                    alt='' 
-                    href=''
-                    className='
-                        object-cover 
-                        shadow-2xl 
-                        p-10 
-                        rounded-[10rem] 
-                        w-[50vw]
-                        min-w-[20rem]
-
-                        hover:cursor-pointer
-                    '
-                    
-                />
-                <div className="flex flex-col">
+                <img src={Menu} alt='' href='' />
+                <div className="menuCard--text">
                     <h1>Discover Our</h1>
                     <h1>Delicious</h1>
                     <h1>Food Menu</h1>

@@ -1,16 +1,18 @@
+
 export default function Footer() {
     return (
         <footer className="h-[20vh] mt-10">
             <div className="flex flex-col items-center">
-                <h1 className="mb-10 font-bold text-xl">Barley's</h1>
-                <div className="flex gap-10 font-medium text-sm">
+                <h1 className="mb-10 font-bold text-xl ">Barley's</h1>
+                <div className="footer--links">
                     <span><a href="" />About Us</span>
                     <span><a href="" />Menu</span>
                     <span><a href="" />Events</span>
-                    <span><a href="" />Contact</span>
-                    <span><a href="" />Reservations</span>
+                    <a href="#contact">Contact</a>
+                    <span><a href="" />Reservations</span>  
                 </div>
             </div>
+           
             <div className="flex flex-col items-center my-10">
                 <hr className="border border-gray-200 h-[1px] w-[92vw] mt-5"/>
             </div>

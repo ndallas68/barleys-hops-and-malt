@@ -9,7 +9,7 @@
   --darkGrey: #464D53;
   --caloryCard: #656565;
   --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
-  --menuCard: linear-gradient(210.41deg, #24262b, #656565);
+  --menuCard: linear-gradient(210.41deg, #24262b, #656565c5);
   --fade: linear-gradient(to left, #000000, rgba(101, 101, 101, 0));
   --appColor:  #ffffff;
 
@@ -63,7 +63,7 @@ code {
 
 .btn--secondary{
   background: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem .5rem;
   width: 5rem;
   color: black;
   line-height: 1.5rem;
@@ -81,9 +81,14 @@ code {
   -webkit-text-stroke-color: white;
 }
 
+.title{
+    font-weight: bold;
+    font-size: 5rem;
+}
+
 h1{
   font-weight: bold;
-  font-size: 5rem;  
+  font-size: 3rem;
 }
 
 h2{
@@ -95,9 +100,30 @@ p{
   font-size: 1.2rem;
 }
 
-@media screen and ( max-width: 850px ) {
+@media screen and (  768px < width <= 1700px ) {
+  .title{
+    font-weight: bold;
+    font-size: 3rem;
+}
   h1{
-      font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  h2{
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+}
+
+@media screen and ( width <= 768px ) {
+  .title{
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  h1{
+      font-size: 1.75rem;
   }
   h2{
       font-size: 1rem;
@@ -108,5 +134,10 @@ p{
 
   .btn--mobile{
     width: 8rem;
+    margin-right: 0;
+  }
+  .mobile--hide{
+    display: none;
   }
 }
+

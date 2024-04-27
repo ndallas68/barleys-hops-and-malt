@@ -3,7 +3,7 @@ import Burger from '/images/monster_burger.jpg';
 
 export default function Specials() {
     return (
-        <main className="specials"> 
+        <main id="specials"> 
             <section className="specials--container">
                 <div className="specials--container__text">
 
@@ -30,9 +30,9 @@ export default function Specials() {
                     </div>
 
                     {/* Call to Action */}
-                    <div className="flex">
+                    <div className="specials--callToAction">
                         <button className='btn--main'>Order</button>
-                        <span className="ml-5 flex items-center hover:cursor-pointer hover:underline hover:scale-105">
+                        <span className="specials--callToAction__link hover:cursor-pointer hover:underline hover:scale-105">
                             <a href="/" />
                                 All Specials
                             <MdKeyboardArrowRight />
@@ -40,12 +40,7 @@ export default function Specials() {
                     </div>
                 </div>
             </section>
-            <div>
-                <img 
-                    src={Burger} 
-                    alt='' 
-                    className="hover:cursor-pointer p-10 w-[100%] min-h-[60vh] min-w-[60vh] max-w-[70vh] object-cover rounded-[10rem] shadow-2xl"/>
-            </div>
+            <img src={Burger} alt='' className="shadow-2xl hover:cursor-pointer"/>
         </main>
     );
 }

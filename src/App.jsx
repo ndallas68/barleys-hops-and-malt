@@ -19,7 +19,6 @@ function App() {
       <MenuCard />
       <Reviews />
       <Contact />
-      <About />
       <Footer />
     </>
   )
