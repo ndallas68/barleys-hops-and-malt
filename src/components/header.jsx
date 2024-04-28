@@ -38,17 +38,17 @@ export default function Header() {
                         initial={{ x: '100%' }}
                         animate={{ x: 0 }}
                         exit={{ x: '-100%'}}
-                        transition={{ type: "spring", duration: 0.7 }}
+                        transition={{ type: "spring", duration: 1 }}
                     >
                         <div className="flex gap-5 items-center nav--list">
                             <span className="logo">Barley{"'"}s</span>
-                            <a href="" onClick={() => {setMenuOpen(false)}}>
+                            <a href="" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
                                 <li>Events</li>
                             </a>
-                            <a href="#specials" onClick={() => {setMenuOpen(false)}}>
+                            <a href="#specials" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
                                 <li>Specials</li>
                             </a>
-                            <a href="#contact" onClick={() => {setMenuOpen(false)}}>
+                            <a href="#contact" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
                                 <li>Contact Us</li>
                             </a>
                         </div>

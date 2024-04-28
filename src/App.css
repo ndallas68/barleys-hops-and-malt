@@ -28,7 +28,7 @@
     width: 140px;
     border-radius: 50px;
     transition-duration: 0.3s;
-    background-color: rgb(255, 75, 75);
+    background-color: rgb(0, 0, 0);
     align-items: center;
   }
   
@@ -102,8 +102,25 @@
     
 }
 
-.nav--closed{
+.nav--link__active{
+    position: relative;
+    
+}
+.nav--link__active::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: black;
+    border-radius: 50%;
+    transition: width 0.2s;
+}
 
+.nav--link__active:hover::after{
+    width: 100%;
+    box-shadow: 100px;
 }
 /*--------  HERO  ----------*/
 .hero{
@@ -177,6 +194,11 @@
     object-fit: cover;
     object-position: center;
     border-radius: 10rem;
+}
+
+#specials>img:hover{
+    transform: scale(1.05);
+    transition: all 3s ease-in-out;
 }
 
 .specials--callToAction{

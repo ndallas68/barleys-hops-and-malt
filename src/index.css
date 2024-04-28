@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scroll-behavior: smooth;
+}
+
 :root {
   --lightgray: #D9D9D9;
   --gray: #9c9c9c;
@@ -33,11 +37,17 @@ body {
 h1{
   font-weight: bold;
   font-size: 5rem;  
+
 }
 
 h2{
     font-weight: bold;
     font-size: 1.5rem;
+
+}
+
+p{
+
 }
   
 code {
