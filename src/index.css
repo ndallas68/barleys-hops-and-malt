@@ -13,7 +13,7 @@
   --darkGrey: #464D53;
   --caloryCard: #656565;
   --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
-  --menuCard: linear-gradient(210.41deg, #24262b, #656565c5);
+  --menuCard: linear-gradient(210.41deg, #24262b, #656565);
   --fade: linear-gradient(to left, #000000, rgba(101, 101, 101, 0));
   --appColor:  #ffffff;
 
@@ -93,7 +93,7 @@ code {
 
 .title{
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 h1{

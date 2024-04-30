@@ -30,7 +30,7 @@ export const reviews = [
         content: "The folks here are extremely friendly and helpful. The owner even let me store my bike in the garage to keep my gear from getting soaked. The beer is good and the people are incredible.",
         img: '/images/person2.jpg',
         name: "j2mutch",
-        title: "Local Guide",
+        title: "Professional Ass Eater",
         rating: {
             food: 5,
             service: 5,
@@ -41,9 +41,35 @@ export const reviews = [
     {
         stars: 5,
         content: "TOP NOTCH!! I HIGHLY recommend this place!",
-        img: '/images/person2.jpg',
+        img: '',
         name: "j2mutch",
         title: "Local Guide",
+        rating: {
+            food: 5,
+            service: 5,
+            atmosphere: 5,
+        },
+        recommendation: "Broasted Chicken & Rib Dinner",
+    },
+    {
+        stars: 5,
+        content: "The food is unbelievable, definitely a hidden gem",
+        img: '/images/person2.jpg',
+        name: "big_man42",
+        title: "Non Deodorant User",
+        rating: {
+            food: 5,
+            service: 5,
+            atmosphere: 5,
+        },
+        recommendation: "Broasted Chicken & Rib Dinner",
+    },
+    {
+        stars: 5,
+        content: "Gotta try the pizza, chefs kiss. But the bartender (Rahmiz I think?) dudes ugly as hell",
+        img: '',
+        name: "brutally_honest68",
+        title: "Truth Teller",
         rating: {
             food: 5,
             service: 5,

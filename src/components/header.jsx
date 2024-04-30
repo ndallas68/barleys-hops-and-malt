@@ -21,48 +21,50 @@ export default function Header() {
     }, [getWindowSize]);
 
     return (
-        <header className="header" id="home">
-            {(isMobile === true && menuOpen === false) ? (
-                <div className="desktop--nav">
-                    <span className="text-xl font-bold tracking-wider">Barley{"'"}s</span>
-                    <nav className="bg-var-appColor p-[0.5rem] rounded-md cursor-pointer hamburger"
-                        onClick={() => {setMenuOpen(true)}}
-                    >
-                        <CiMenuBurger size={25} className="font-bold"/>
-                    </nav>
-                </div>
-                
-            ) : (
-                <AnimatePresence mode="popLayout">
-                    <motion.ul className="flex gap-5 ml-5 w-full justify-between nav--menu"
-                        initial={{ x: '100%' }}
-                        animate={{ x: 0 }}
-                        exit={{ x: '-100%'}}
-                        transition={{ type: "spring", duration: 1 }}
-                    >
-                        <div className="flex gap-5 items-center nav--list">
-                            <span className="logo">Barley{"'"}s</span>
-                            <a href="" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
-                                <li>Events</li>
-                            </a>
-                            <a href="#specials" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
-                                <li>Specials</li>
-                            </a>
-                            <a href="#contact" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
-                                <li>Contact Us</li>
-                            </a>
-                        </div>
-                        
-                        <div className="flex nav--btns">
-                            <button
-                                className='grow--btn'
-                                onClick={() => {setMenuOpen(false)}}
-                            >Order {isMobile ? '' : 'Online'}</button>
-                        </div>
-                        <li className="hidden close hover:cursor-pointer" onClick={() => {setMenuOpen(false)}}><IoMdClose /></li>
-                    </motion.ul>
-                </AnimatePresence>
-            )}
-        </header>
+        <div className="relative">
+            <header className="header" id="home">
+                {(isMobile === true && menuOpen === false) ? (
+                    <div className="closed--nav">
+                        <span className="text-2xl font-bold tracking-wider">Barley{"'"}s</span>
+                        <nav className="bg-var-appColor p-[0.5rem] rounded-md cursor-pointer hamburger"
+                            onClick={() => {setMenuOpen(true)}}
+                        >
+                            <CiMenuBurger size={25} className="font-bold"/>
+                        </nav>
+                    </div>
+                    
+                ) : (
+                    <AnimatePresence>
+                        <motion.ul className="nav--menu"
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '-100%'}}
+                            transition={{ type: "spring", duration: 1 }}
+                        >
+                            <div className="flex gap-5 items-center nav--list">
+                                <span className="logo">Barley{"'"}s</span>
+                                <a href="" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
+                                    <li>Events</li>
+                                </a>
+                                <a href="#specials" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
+                                    <li>Specials</li>
+                                </a>
+                                <a href="#contact" className="nav--link__active" onClick={() => {setMenuOpen(false)}}>
+                                    <li>Contact Us</li>
+                                </a>
+                            </div>
+                            
+                            <div className="flex nav--btns">
+                                <button
+                                    className='grow--btn'
+                                    onClick={() => {setMenuOpen(false)}}
+                                >Order {isMobile ? '' : 'Online'}</button>
+                            </div>
+                            <li className="hidden close hover:cursor-pointer" onClick={() => {setMenuOpen(false)}}><IoMdClose /></li>
+                        </motion.ul>
+                    </AnimatePresence>
+                )}
+            </header>
+        </div>
     );
 }

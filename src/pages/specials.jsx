@@ -1,4 +1,5 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { AnimatePresence, motion } from "framer-motion";
 import Burger from '/images/monster_burger.jpg';
 
 export default function Specials() {
@@ -40,7 +41,12 @@ export default function Specials() {
                     </div>
                 </div>
             </section>
-            <img src={Burger} alt='' className="shadow-2xl hover:cursor-pointer"/>
+            <motion.img 
+                initial={{ scale: .9 }}
+                whileInView={{ scale: 1 }}
+                exit={{ scale: .9 }}
+                transition={{ type: 'spring', duration: 8 }}
+                src={Burger} alt='' className="shadow-2xl hover:cursor-pointer"/>
         </main>
     );
 }

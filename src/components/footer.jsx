@@ -1,15 +1,15 @@
 
 export default function Footer() {
     return (
-        <footer className="h-[20vh] mt-10">
+        <footer className="h-[20vh]">
             <div className="flex flex-col items-center">
                 <h1 className="mb-10 font-bold text-xl ">Barley's</h1>
                 <div className="footer--links">
-                    <span><a href="" />About Us</span>
-                    <span><a href="" />Menu</span>
-                    <span><a href="" />Events</span>
+                    <a href="" >About Us</a>
+                    <a href="" >Menu</a>
+                    <a href="" >Events</a>
                     <a href="#contact">Contact</a>
-                    <span><a href="" />Reservations</span>  
+                    <a href="" >Reservations</a>  
                 </div>
             </div>
            
