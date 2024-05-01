@@ -6,7 +6,8 @@ import Reviews from './pages/reviews'
 import MenuCard from './pages/MenuCard'
 import Contact from './pages/contact'
 import Footer from './components/footer'
-import FoodCarousel from './components/FoodCarousel'
+import FoodCarousel from './pages/FoodCarousel'
+import About from './pages/about'
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
       <Header />
       <Hero />
       <Specials />
+      <FoodCarousel />
       <MenuCard />
       <Reviews />
+      <About />
       <Contact />
       <Footer />
     </>

@@ -1,7 +1,10 @@
 
 export default function Footer() {
     return (
-        <footer className="h-[20vh]">
+        <footer className="h-[20vh] relative">
+            {/* <div className='blur-st w-[40rem] h-[20rem] left-[30%] bottom-[0rem] z-[-1]'></div>
+            <div className='spotlight w-[40rem] h-[10rem] right-[30%] bottom-[0rem] z-[-1] opacity-35'></div> */}
+
             <div className="flex flex-col items-center">
                 <h1 className="mb-10 font-bold text-xl ">Barley's</h1>
                 <div className="footer--links">
@@ -14,7 +17,7 @@ export default function Footer() {
             </div>
            
             <div className="flex flex-col items-center my-10">
-                <hr className="border border-gray-200 h-[1px] w-[92vw] mt-5"/>
+                <hr className="border border-gray-800 h-[1px] w-[92vw] mt-5"/>
             </div>
             <div className="py-4 flex justify-between text-[12px] mx-10">
                 <span>© 2024 Barley's. All rights reserved.</span>

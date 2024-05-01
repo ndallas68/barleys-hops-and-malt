@@ -1,61 +1,3 @@
-.backToTop{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-    position: relative;
-}
-
-.top--btn {
-    width: 12px;
-    transition-duration: 0.3s;
-  }
-  
-  .top--btn>:nth-child(1) {
-    fill: white;
-  }
-  
-  .backToTop:hover {
-    width: 140px;
-    border-radius: 50px;
-    transition-duration: 0.3s;
-    background-color: rgb(0, 0, 0);
-    align-items: center;
-  }
-  
-  .backToTop:hover .top--btn {
-    /* width: 20px; */
-    transition-duration: 0.3s;
-    transform: translateY(-250%);
-  }
-  
-  .backToTop::before {
-    position: absolute;
-    bottom: -20px;
-    content: "Back to Top";
-    color: white;
-    /* transition-duration: .3s; */
-    font-size: 0px;
-  }
-  
-  .backToTop:hover::before {
-    font-size: 13px;
-    opacity: 1;
-    bottom: unset;
-    /* transform: translateY(-30px); */
-    transition-duration: 0.3s;
-  }
-  
-
 
 /*--------  NAV  ----------*/
 .header{
@@ -66,6 +8,7 @@
     padding: 1.5rem 2rem;
     background: transparent;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: white;
     font-size: large;
     z-index: 9999;
@@ -92,7 +35,7 @@
     justify-content: center;
     letter-spacing: 0.2em;
     font-size: 1.25rem;
-    line-height: 1.75rem;
+    line-height: 3rem;
     font-weight: 800;
     margin-right: auto;
 }
@@ -111,22 +54,24 @@
     font-weight: 300;
     
 }
-.nav--link__active::after{
+.nav--link__active::after {
     content: '';
     position: absolute;
     height: 3px;
-    left: 0;
     bottom: 0;
-    width: 0;
+    width: 0; /* Initially set to zero */
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 50px;
-    transition: width .8s;
-    box-shadow: 50px;
+    transition: width 0.8s, transform 0.8s;
     background: rgb(255, 186, 57);
+    opacity: 0; /* Initially hidden */
 }
 
-.nav--link__active:hover:after{
+.nav--link__active:hover::after {
     width: 100%;
-    box-shadow: 100px;
+    transform: translateX(-50%);
+    opacity: 1; /* Show on hover */
 }
 
 .nav--btns{
@@ -186,7 +131,6 @@
 .hero--header{
     display: flex;
     flex-direction: column;
-    font-size: 5rem;
     font-weight: bold;
     /* background: rgba(75, 68, 58, 0.253);
     backdrop-filter: blur(10px); */
@@ -201,6 +145,7 @@
     justify-content: center;
     gap: 2.5rem;
     padding: 5rem;
+    height: 90vh;
 }
 
 .specials--container{
@@ -221,7 +166,7 @@
 }
 
 #specials>img{
-    max-width: 60rem;
+    max-width: 70rem;
     padding: 2rem;
     object-fit: cover;
     object-position: center;
@@ -243,80 +188,9 @@
     margin-left: 2rem;
 }
 
-/*--------- FAVORITES -----------*/
-#favorites{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-
-}
-.favorites--header{
-    display: flex;
-    position: relative;
-    gap: 4rem;
-    justify-content: flex-start;
-    margin: 2rem;
-}
-
-.favorites--header__active {
-    position: relative; 
-    cursor: pointer;
-}
-.favorites--header::before {
-    content: 'House Favorites';
-    position: absolute;
-    top: -25px;
-    left: 0;
-    font-size: small;
-    font-weight: normal;
-}
-.favorites--header__active::after {
-    content: '';
-    position: absolute;
-    bottom: -12px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px; 
-    height: 10px; 
-    background-color: black; 
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.foodCard--container{
-    display: flex;
-    position: relative;
-}
-.foodCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-radius: 2rem;
-    border: white;
-    color: white;
-    padding: 1rem;
-    background: linear-gradient(145deg, #656565 40%, #000000 100.75%) ;
-    box-shadow: 0 35px 60px -15px rgba(0,0,0,0.7);
-
-    width: 30%;
-    gap: 1rem;
-}
-.foodCard:hover{
-    transform: scale(1.05);
-    transition: all 2s;
-    cursor: pointer;
-}
-
-.foodCard>img{
-    object-fit: cover;
-    object-position: center;
-    border-radius: 2rem;
-    height: 20rem;
-}
-
 /*--------- MENU CARD ---------*/
 #menuCard{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
@@ -349,6 +223,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 70vh;
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
@@ -430,17 +305,67 @@
     right: 1rem;
 }
 
+/*---- ABOUT ----*/
+#about{
+}
+
+.about{
+    display: flex;
+    color: white;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.about--container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.about--text{
+    margin-top: 2rem;
+    line-clamp: 5;
+}
+
+.about>img{
+    padding: 2rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10rem;
+}
+
+.about>img::view-transition{
+    transform: scale(1.05);
+    transition: all 3s ease-in-out;
+}
+
+
+
 /*---- CONTACT ----*/
 #contact{
     display: flex;
+    position: relative;
     flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
     margin-top: 2rem;
+    color: black;
+    padding: 5rem;
 }
 
 .contact--header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: inherit;
+}
+
+.contact--test{
+    box-shadow: 0 35px 60px 20px rgba(0,0,0,0.3);
 }
 
 .contact--container{
@@ -458,7 +383,7 @@
 }
 
 .map{
-    width: 50%;
+    width: 70%;
     border-radius: 2rem;
 }
 
@@ -504,6 +429,64 @@
     font-size: small;
     font-weight: 500;
 }
+
+.backToTop{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.top--btn {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .top--btn>:nth-child(1) {
+    fill: white;
+  }
+  
+  .backToTop:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+  }
+  
+  .backToTop:hover .top--btn {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-250%);
+  }
+  
+  .backToTop::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .backToTop:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+  
 
 
 @media screen and ( 768px < width <= 1700px ) {

@@ -43,7 +43,11 @@ export default function Reviews() {
 
     return (
         <div id="reviews"> 
-            <article className="reviews--container">
+            <article className="reviews--container bg-[#f2f2f2]">
+                <div className='spotlight w-[50%] h-[80%] left-[-20rem] top-[-5rem] z-[-1] opacity-40'></div>
+                <div className='spotlight w-[50%] h-[80%] right-[-20rem] top-[-5rem] z-[-1] opacity-40'></div>
+                <div className='blur-st w-[50%] h-[80%] left-[-20rem] top-[10rem] z-[-1]'></div>
+                <div className='blur-st w-[50%] h-[80%] right-[-20rem] top-[10rem] z-[-1]'></div>
                 <div className="reviews--heading">
                     <h1 className="">What Our Customers Say</h1>
                     <span>Delicious food, great atmosphere, and friendly service!</span>
@@ -148,6 +152,7 @@ export default function Reviews() {
 
                 </div>
             </article>
+            
         </div>
     );
 }

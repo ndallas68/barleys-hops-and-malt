@@ -26,12 +26,10 @@
   
 body {
   margin: 0;
-  font-family: SweetSansText, system-ui, -apple-system, BlinkMacSystemFont, 
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", 
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  /* background: #757575; */
+  background-color: #333333;
 }
 
 h1{
@@ -46,9 +44,6 @@ h2{
 
 }
 
-p{
-
-}
   
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -62,10 +57,12 @@ code {
 .btn--main{
   background: black;
   padding: 0.5rem 1rem;
-  width: 5rem;
+  min-width: 7rem;
   color: white;
   line-height: 1.5rem;
+  border: 1px solid rgb(83, 83, 83);
   border-radius: 1rem;
+  transition: all 1s;
 }
 .btn--main:hover{
   transform: scale(1.1);
@@ -74,11 +71,12 @@ code {
 .btn--secondary{
   background: white;
   padding: 0.5rem .5rem;
-  width: 5rem;
+  width: 7rem;
   color: black;
   line-height: 1.5rem;
-  border: 1px solid black;
+  border: 1px solid rgb(83, 83, 83);
   border-radius: 1rem;
+  transition: all 1s;
 }
 .btn--secondary:hover{
   transform: scale(1.1);
@@ -93,7 +91,7 @@ code {
 
 .title{
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 7rem;
 }
 
 h1{
@@ -110,7 +108,22 @@ p{
   font-size: 1.2rem;
 }
 
-@media screen and (  768px < width <= 1700px ) {
+.blur-st{
+  background: rgba(253, 120, 43, 0.20);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+}
+
+.spotlight{
+  background: rgb(255, 255, 255);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -1;
+}
+
+@media screen and (  768px < width <= 1900px ) {
   .title{
     font-weight: bold;
     font-size: 5rem;
@@ -150,4 +163,3 @@ p{
     display: none;
   }
 }
-
