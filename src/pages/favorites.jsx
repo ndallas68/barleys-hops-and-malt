@@ -1,7 +1,3 @@
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { BsArrowUpRightCircleFill } from "react-icons/bs";
-
 export default function Favorites() {
 
     return (

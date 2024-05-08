@@ -1,12 +1,12 @@
 
 export default function Footer() {
     return (
-        <footer className="h-[20vh] relative">
-            {/* <div className='blur-st w-[40rem] h-[20rem] left-[30%] bottom-[0rem] z-[-1]'></div>
-            <div className='spotlight w-[40rem] h-[10rem] right-[30%] bottom-[0rem] z-[-1] opacity-35'></div> */}
+        <footer className="h-[20vh] relative mt-[10rem]">
+            <div className='spotlight footer--blur z-[-1] opacity-20' />
+            {/* <div className='spotlight w-[40rem] h-[10rem] right-[30%] bottom-[0rem] z-[-1] opacity-35'></div> */}
 
-            <div className="flex flex-col items-center">
-                <h1 className="mb-10 font-bold text-xl ">Barley's</h1>
+            <div className="flex flex-col items-center ">
+                <h1 className="mb-10 font-bold text-xl">Barley's</h1>
                 <div className="footer--links">
                     <a href="" >About Us</a>
                     <a href="" >Menu</a>

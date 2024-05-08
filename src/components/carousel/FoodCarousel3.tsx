@@ -63,3 +63,5 @@ const FoodCarousel3 = ({ images }) => {
 };
 
 export default FoodCarousel3;
+
+

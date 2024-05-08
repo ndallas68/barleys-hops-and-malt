@@ -426,8 +426,21 @@
 .footer--links{
     display: flex;
     gap: 2rem;
-    font-size: small;
+    font-size: normal;
     font-weight: 500;
+}
+
+.footer--links>a:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.footer--blur{
+    width: 40rem;
+    height: 20rem;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .backToTop{

@@ -5,30 +5,30 @@ import FoodCarousel3 from "../components/carousel/FoodCarousel3";
 
 export default function FoodCarousel() {
     const images1 = [
-        '/images/food/bacon_burger.jpg',
-        '/images/food/egg.jpg',
-        '/images/food/brek_burger.jpg',
-        '/images/food/meat_sand.jpg',
-        '/images/food/everything_za.jpg',
+        '/optimized-images/bacon_burger.jpg',
+        '/optimized-images/egg.jpg',
+        '/optimized-images/brek_burger.jpg',
+        '/optimized-images/meat_sand.jpg',
+        '/optimized-images/everything_za.jpg',
     ];
 
     const images2 = [
-        '/images/food/hawaiian.jpg',
-        '/images/food/mediteranian.jpg',
-        '/images/food/food1.jpg',
-        '/images/food/food2.jpg',
-        '/images/food/food3.jpg',
+        '/optimized-images/hawaiian.jpg',
+        '/optimized-images/mediteranian.jpg',
+        '/optimized-images/food1.jpg',
+        '/optimized-images/food2.jpg',
+        '/optimized-images/food3.jpg',
         
     ];
 
     const images3 = [
-        '/images/food/food4.jpg',
-        '/images/food/pulled_pork.jpg',
-        '/images/food/steak.jpg',
-        '/images/food/meat.jpg',
-        '/images/food/club.jpg',
-        '/images/food/wings.jpg',
-        '/images/food/meatballs.jpg',
+        '/optimized-images/food4.jpg',
+        '/optimized-images/pulled_pork.jpg',
+        '/optimized-images/steak.jpg',
+        '/optimized-images/meat.jpg',
+        '/optimized-images/club.jpg',
+        '/optimized-images/wings.jpg',
+        '/optimized-images/meatballs.jpg',
 
     ]
 

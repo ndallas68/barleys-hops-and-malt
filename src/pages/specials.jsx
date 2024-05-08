@@ -1,6 +1,6 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { AnimatePresence, motion } from "framer-motion";
-import Burger from '/images/monster_burger.jpg';
+import { motion } from "framer-motion";
+import Burger from '/optimized-images/monster_burger.jpg';
 
 export default function Specials() {
     return (
@@ -50,7 +50,8 @@ export default function Specials() {
                     exit={{ scale: .9 }}
                     transition={{ type: 'spring', duration: 8 }}
                     src={Burger} alt='' 
-                    className="shadow-2xl hover:cursor-pointer bg-[white]"/>
+                    className="shadow-2xl hover:cursor-pointer bg-white"
+                />
             </main>
             <div className='spotlight w-[50%] h-[80%] left-0 top-[10%]'></div>
             <div className='spotlight w-[40rem] h-[30rem] right-[-10rem] top-[-10rem] opacity-75'></div>

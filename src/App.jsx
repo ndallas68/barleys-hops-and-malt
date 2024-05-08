@@ -7,7 +7,6 @@ import MenuCard from './pages/MenuCard'
 import Contact from './pages/contact'
 import Footer from './components/footer'
 import FoodCarousel from './pages/FoodCarousel'
-import About from './pages/about'
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
       <FoodCarousel />
       <MenuCard />
       <Reviews />
-      <About />
       <Contact />
       <Footer />
     </>
