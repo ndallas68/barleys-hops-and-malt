@@ -36,15 +36,15 @@ export default function FoodCarousel() {
         <div className="relative">
             <div className='blur-st w-[22rem] h-[30rem] left-[40%] bottom-[-200px]'></div>
             <div className='blur-st w-[22rem] h-[30rem] top-[-200px] right-[-200px]'></div>
-            <main className="py-8 px-10 h-[90vh] overflow-hidden flex gap-5">
-                <section className="flex gap-5 carousel--container">
+            <main className="py-8 px-10 h-[90vh] overflow-hidden flex gap-5 carousel--container">
+                <section className="flex gap-5 carousel--images">
                     <FoodCarousel1 images={images1} />
                     <FoodCarousel2 images={images2} />
                     <FoodCarousel3 images={images3} /> 
                 </section>
                 
                 <section className="flex-1 text-white flex flex-col justify-center items-center">
-                    <div>
+                    <div className="carousel--text">
                         <h1>Discover Our Delicious</h1>
                         <h1>Food Menu</h1> 
                         <p className="max-w-[80%] mt-5">Indulge in our mouthwatering dishes made with fresh, local ingredients.</p>
@@ -54,7 +54,6 @@ export default function FoodCarousel() {
                         </div>
                     </div>
                 </section>
-                
             </main>
         </div>
         

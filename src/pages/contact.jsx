@@ -20,11 +20,14 @@ export default function Contact() {
     return (
         <div className="flex justify-center align-center my-10">
             <div id="contact" className="w-[80%] bg-[#f2f2f2] contact--test">
-            <div className='spotlight w-[50%] h-[80%] left-[-20rem] top-[-5rem] opacity-40'></div>
-                <div className='spotlight w-[50%] h-[80%] right-[-20rem] top-[-5rem] opacity-40'></div>
+                {/* bg blurs */}
+                <div className='spotlight w-[50%] h-[80%] left-[-20rem] top-[-5rem] opacity-40' />
+                <div className='spotlight w-[50%] h-[80%] right-[-20rem] top-[-5rem] opacity-40' />
 
-                <div className='blur-st w-[50%] h-[80%] left-[-20rem] top-[20rem] z-[-1]'></div>
-                <div className='blur-st w-[50%] h-[80%] right-[-20rem] top-[20rem] z-[-1]'></div>
+                <div className='blur-st w-[50%] h-[80%] left-[-20rem] top-[20rem] z-[-1]' />
+                <div className='blur-st w-[50%] h-[80%] right-[-20rem] top-[20rem] z-[-1]' />
+
+                
                 <div className="contact--header">
                     <header className="font-medium text-xs">East Troy, WI</header>
                     <hr className="border border-gray-500 rounded-xl w-[7vw] mt-5"/>

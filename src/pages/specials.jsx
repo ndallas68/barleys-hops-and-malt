@@ -44,14 +44,7 @@ export default function Specials() {
                         </div>
                     </div>
                 </section>
-                <motion.img 
-                    initial={{ scale: .9 }}
-                    whileInView={{ scale: 1 }}
-                    exit={{ scale: .9 }}
-                    transition={{ type: 'spring', duration: 8 }}
-                    src={Burger} alt='' 
-                    className="shadow-2xl hover:cursor-pointer bg-white"
-                />
+                <img src={Burger} alt='' className="shadow-2xl hover:cursor-pointer bg-white" />
             </main>
             <div className='spotlight w-[50%] h-[80%] left-0 top-[10%]'></div>
             <div className='spotlight w-[40rem] h-[30rem] right-[-10rem] top-[-10rem] opacity-75'></div>
